@@ -1,2 +1,2 @@
-# XR-27-Figure_it_out_or_die_trying
+# XR-27v2
 Do what you must. Or die trying.
