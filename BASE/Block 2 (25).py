@@ -1,7 +1,6 @@
 """
 Контейнеры + функции
 25 задач от нейронки + практика с Notion
-Затраченное время: 1 час.
 
 ... Я нихрена не понимаю.
 """
@@ -87,6 +86,45 @@ def avg_grades(stud: list) -> list:
         result.append(student)
     result.sort(key=lambda x: x['avg'], reverse=True)
     return result
+
+
+"""
+5.
+Удаление дубликатов на месте
+Напиши функцию remove_duplicates_inplace(lst), которая удаляет дубликаты из
+переданного списка, изменяя его (не создавая новый). Сохранять порядок.
+"""
+
+lst1 = [1, 2, 2, 3, 1, 4, 3, 5]
+lst2 = [10, 20, 30, 40]
+lst3 = [7, 7, 7, 7]
+lst4 = [5, 5, 6, 7, 6, 8, 8, 9, 5]
+lst5 = [0, -1, 2, -1, 0, 3, 3, -2]
+lst6 = ["яблоко", "груша", "яблоко", "апельсин", "груша", "банан"]
+lst7 = ["a", "A", "b", "a", "B", "b"]
+lst8 = ["", "hello", "", "world", "hello", ""]
+lst9 = [1, "1", True, 1, False, True, None, "1", None]
+lst10 = [[1, 2], [3, 4], [1, 2], [5, 6]]
+lst11 = [(1, 2), (3, 4), (1, 2), (5, 6)]
+lst12 = []
+lst13 = [42]
+lst14 = [None, False, True, None, False]
+
+
+# Функция:
+def remove_duplicates_inplace(lst: list) -> None:
+    """
+    Функция исключает повторяющиеся элементы, сохраняя сортировку.
+    Внимание: Изменяет исходный список.
+    :param lst: Список для сортировки.
+    :return: Список уникальных элементов с сохранением сортировки.
+    """
+    uniq_item = []
+    for item in lst:
+        if item not in uniq_item:
+            uniq_item.append(item)
+    lst[:] = uniq_item
+    return None
 
 
 if __name__ == '__main__':
